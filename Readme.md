@@ -1,6 +1,6 @@
 # Buzz API test
 
-This project is a FastAPI based API to manage machines and sites. The project is structured with modular components for easy maintenance and scaling.
+This project is a FastAPI based API to solve the buzz api tech test. The project is structured with modular components for easy maintenance and scaling.
 
 ## Project Structure
 
@@ -89,6 +89,12 @@ docker-compose up -d db
 
 The API should be accessible at `http://localhost:8000`.
 
+## How to test
+
+Run the following command:
+```bash
+python3 -m pytest
+```
 ## API Documentation
 
 You can access the API documentation at `http://localhost:8000/docs` and the ReDoc documentation at `http://localhost:8000/redoc`.
