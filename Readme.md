@@ -1,4 +1,4 @@
-# My FastAPI Project
+# Buzz API test
 
 This project is a FastAPI based API to manage machines and sites. The project is structured with modular components for easy maintenance and scaling.
 
