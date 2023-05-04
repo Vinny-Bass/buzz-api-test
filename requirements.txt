@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+sqlalchemy
+asyncpg
+asyncpg
+pytest
+pytest-asyncio
+testing.postgresql
