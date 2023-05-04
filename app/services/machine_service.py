@@ -4,7 +4,7 @@ from sqlalchemy import select
 
 from app.database.models import Machine
 from app.database.schemas import MachineCreate, MachineUpdate
-from .site_service import get_site
+from app.services.site_service import get_site
 from app.services.shared.errors import SiteEnergyError
 
 
@@ -51,7 +51,7 @@ async def create_machine(db: AsyncSession, machine: MachineCreate) -> Optional[M
     db.add(new_machine)
     await db.commit()
     await db.refresh(new_machine)
-    return machine
+    return new_machine
 
 
 async def update_machine(db: AsyncSession, machine_id: int, machine: MachineUpdate) -> Optional[Machine]:
