@@ -6,6 +6,9 @@ services:
       context: .
     ports:
       - "8000:8000"
+    environment:
+      DATABASE_URL: "postgresql+asyncpg://buzz:buzz@db:5432/buzz_db"
+      RUN_INIT_DB: "${RUN_INIT_DB}"
     depends_on:
       - db
 

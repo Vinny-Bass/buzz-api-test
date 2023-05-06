@@ -1,7 +1,11 @@
+import os
 from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
 from contextlib import asynccontextmanager
 
 SQLALCHEMY_DATABASE_URL = "postgresql+asyncpg://buzz:buzz@localhost:5555/buzz_db"
+
+if "DATABASE_URL" in os.environ:
+    SQLALCHEMY_DATABASE_URL = os.environ["DATABASE_URL"]
 
 engine = create_async_engine(SQLALCHEMY_DATABASE_URL, echo=True, future=True)
 

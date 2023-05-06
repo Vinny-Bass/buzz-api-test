@@ -6,3 +6,4 @@ asyncpg
 pytest
 pytest-asyncio
 testing.postgresql
+tenacity

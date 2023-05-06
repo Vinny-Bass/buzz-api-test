@@ -64,13 +64,17 @@ You can now access the API at `http://localhost:8000`.
 
 ## Running with Docker
 
-1. Build the Docker image:
+1. Set the env vars on .env file, if is the first time you are running the project or you just want to rebuild the database just
+set RUN_INIT_DB=1 otherwise you can leave 0.
+
+
+2. Build the Docker image:
 
 ```bash
 docker build -t my-fastapi-project .
 ```
 
-2. Run the Docker container:
+3. Run the Docker container:
 
 ```bash
 docker run -d --name my-fastapi-project -p 8000:8000 my-fastapi-project
